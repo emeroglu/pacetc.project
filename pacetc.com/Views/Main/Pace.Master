@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleCPH" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/Client/images/symbol.png" />
+    <link rel="stylesheet" type="text/css" href="/Client/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/Client/css/pace.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/Client/css/media-queries.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/Client/js/fancybox/jquery.fancybox.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/Client/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.2" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/Client/type/fontello.css">
+
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="/Client/css/ie8.css" media="all" />
+    <![endif]-->
+    <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="/Client/css/ie9.css" media="all" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="/Client/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/Client/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Client/js/ddsmoothmenu.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="/Client/js/selectnav.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.slickforms.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.easytabs.min.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/Client/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script>
+    <script type="text/javascript" src="/Client/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.0"></script>
+    <script type="text/javascript" src="/Client/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/Client/js/jquery.touchcarousel-1.2.min.js"></script>
+    <script type="text/javascript" src="/Client/js/twitter.min.js"></script>
+    <script type="text/javascript" src="/Client/js/boostrapslider.js"></script>
+
+    <link href="/Client/css/master.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadCPH" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body class="full-layout">
+
+    <div class="body-wrapper">        
+        <div class="top-wrapper">
+            <header>
+                <div class="inner">
+                    <img id="logo" src="/Client/images/logo.png" style="width: 15%; float: left; margin-top: -50px;" />
+                    <nav id="menu" class="menu">
+                        <ul id="tiny">
+                            <li id="Home"><a href="/Home">Home</a>
+                            </li>
+                            <li id="About"><a href="/About">About Us</a>
+                            </li>
+                            <li id="Training"><a href="/Training">Training</a>
+                            </li>
+                            <li id="Translation"><a href="/Translation">Translation</a>
+                            </li>
+                            <li id="StudyAbroad"><a href="/StudyAbroad">Study Abroad</a>
+                            </li>
+                            <li><a href="#contact">Contact</a>
+                            </li>
+                            <li><a href="http://tr.pacetc.com">TR</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <asp:ContentPlaceHolder ID="BodyCPH" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+    <div class="light-wrapper" id="contact">
+        <div class="inner">
+            <div class="one-third">
+                <div class="sidebox" style="margin-top: -25px;">
+                    <img src="/Client/images/logo.png" style="width: 200px; margin-bottom: 25px;" />
+                    <h3>Get In Touch</h3>
+                    <p>Pace Training and Consultancy is a vibrant solution partner for your training and translation needs.</p>
+                    <i class="icon-location contact"></i>Vatan Cad 3/C, Sultan Fatih Sitesi, Siteler, Gürpınar 34528, Beylikdüzü, İstanbul
+                    <br />
+                    <i class="icon-phone contact"></i>+90 536 322 88 68
+                    <br />
+                    <i class="icon-mail contact"></i><a id="email">info@pacetc.com</a>
+                </div>
+            </div>
+            <div class="two-third last">
+                <h2>Feel Free to Drop Us a Line</h2>
+                <div class="form-container">
+                    <div class="response">Message sent...</div>
+                    <form class="forms" action="/Mail" method="post">
+                        <fieldset>
+                            <ol>
+                                <li class="form-row text-input-row name-field">
+                                    <input type="text" name="name" class="text-input defaultText required" title="Name (Required)" />
+                                </li>
+                                <li class="form-row text-input-row email-field">
+                                    <input type="text" name="email" class="text-input defaultText required email" title="Email (Required)" />
+                                </li>
+                                <li class="form-row text-input-row subject-field">
+                                    <input type="text" name="subject" class="text-input defaultText" title="Subject" />
+                                </li>
+                                <li class="form-row text-area-row">
+                                    <textarea name="message" class="text-area required"></textarea>
+                                </li>
+                                <li class="form-row hidden-row">
+                                    <input type="hidden" name="hidden" value="" />
+                                </li>
+                                <li class="button-row" style="float: left;">                                    
+                                    <input type="submit" value="Submit" name="submit" class="btn-submit" style="float: left;">                                    
+                                </li>
+                            </ol>
+                            <input type="hidden" name="v_error" id="v-error" value="Required" />
+                            <input type="hidden" name="v_email" id="v-email" value="Enter a valid email" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>            
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="/Client/js/scripts.js"></script>
+
+    <script type="text/javascript">
+        var q = document.URL.split("/");
+        var id = q[q.length - 1];
+
+        document.getElementById(id).className = "active";
+    </script>
+
+    <asp:ContentPlaceHolder ID="LeastScriptsCPH" runat="server"></asp:ContentPlaceHolder>
+
+</body>
+</html>

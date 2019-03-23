@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html ng-app>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Pace | Content Management</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/img/symbol.png" />
+
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/style_responsive.css" rel="stylesheet" />
+    <link href="/css/style_default.css" rel="stylesheet" id="style_color" />
+
+    <link href="/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/uniform/css/uniform.default.css" />
+    <link href="/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="/assets/jqvmap/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script src="/js/angular.js"></script>
+
+    <script type="text/javascript">
+        function Toast(containerId, messageType, messageText, time) {
+            //messageTypes  :  alert, success, info, warning
+            var messageHtml;
+            if (containerId == "") containerId = "divMessage";
+
+
+            var messageHtml = "<div class=\"alert alert-" + messageType.toLowerCase() + "\">" +
+             "<button class=\"close\" data-dismiss=\"alert\">×</button>" +
+              messageText +
+             "</div>";
+
+            $("#" + containerId).html(messageHtml).show("slow");
+
+            setTimeout(function () { $("#" + containerId).hide("slow"); }, time);
+        }
+    </script>
+
+    <style type="text/css">
+        #container
+        {
+            margin-top: 25px !important;
+        }
+
+        body
+        {
+            background: rgba(4, 53, 114, 0.01) !important;
+            color: #012e6f;
+        }
+
+        #sidebar ul li a
+        {
+            background-color: rgba(4, 53, 114, 0.4) !important;
+        }
+
+        .breadcrumb
+        {
+            margin-top: 25px;
+        }
+
+        #sidebar ul
+        {
+            width: 200px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadCPH"></asp:ContentPlaceHolder>
+</head>
+<body class="fixed-top">
+    <!-- BEGIN CONTAINER -->
+    <div id="container" class="row-fluid">
+        <!-- BEGIN SIDEBAR -->
+        <div id="sidebar" class="nav-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <img src="/img/logo.png" style="width: 80%; margin-left: 10%; margin-top: 5%;" alt="" />
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="/Stats?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-dashboard"></i></span>Statistics
+                    </a>
+                </li>
+                <li>
+                    <a href="/BannerEN?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-star-empty"></i></span>Banner (EN)
+                    </a>
+                </li>
+                <li>
+                    <a href="/BannerTR?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-star-empty"></i></span>Banner (TR)
+                    </a>
+                </li>
+                <li>
+                    <a href="/FeedbacksEN?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-refresh"></i></span>Feedbacks (EN)
+                    </a>
+                </li>
+                <li>
+                    <a href="/FeedbacksTR?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-refresh"></i></span>Feedbacks (TR)
+                    </a>
+                </li>
+                <li>
+                    <a href="/?token=<%: ViewBag.Token %>" class="">
+                        <span class="icon-box"><i class="icon-remove"></i></span>Logout
+                    </a>
+                </li>
+            </ul>
+            <!-- END SIDEBAR MENU -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN PAGE -->
+        <div id="main-content" style="margin-left: 225px; width: 1080px; min-height: 450px; padding-bottom: 150px;">
+            <!-- BEGIN PAGE CONTAINER-->
+            <div class="container-fluid">
+                <!-- BEGIN PAGE HEADER-->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="icon-home"></i></a><span class="divider">&nbsp;</span>
+                            </li>
+                            <li>
+                                <a href="#">Pace CMS</a> <span class="divider">&nbsp;</span>
+                            </li>
+                            <li><a href="#"><%: ViewBag.Page %></a><span class="divider-last">&nbsp;</span></li>
+                        </ul>
+                        <!-- END PAGE TITLE & BREADCRUMB-->
+                    </div>
+                </div>
+                <!-- END PAGE HEADER-->
+                <!-- BEGIN PAGE CONTENT-->
+                <div id="page" class="dashboard" style="text-align: center;">
+                    <div id="divMessage" style="width: 40%;"></div>
+                    <asp:ContentPlaceHolder runat="server" ID="BodyCPH"></asp:ContentPlaceHolder>
+                </div>
+                <!-- END PAGE CONTENT-->
+            </div>
+            <!-- END PAGE CONTAINER-->
+        </div>
+        <!-- END PAGE -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN JAVASCRIPTS -->
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/assets/jquery-slimscroll/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="/assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/assets/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.blockui.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <!-- ie8 fixes -->
+    <!--[if lt IE 9]>
+	<script src="/js/excanvas.js"></script>
+	<script src="/js/respond.js"></script>
+	<![endif]-->
+    <script src="/assets/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+    <script src="/assets/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+    <script src="/assets/jquery-knob/js/jquery.knob.js"></script>
+    <script src="/assets/flot/jquery.flot.js"></script>
+    <script src="/assets/flot/jquery.flot.resize.js"></script>
+
+    <script src="/assets/flot/jquery.flot.pie.js"></script>
+    <script src="/assets/flot/jquery.flot.stack.js"></script>
+    <script src="/assets/flot/jquery.flot.crosshair.js"></script>
+
+    <script src="/js/jquery.peity.min.js"></script>
+    <script type="text/javascript" src="/assets/uniform/jquery.uniform.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            // initiate layout and plugins
+            App.setMainPage(true);
+            App.init();
+        });
+    </script>
+    <!-- END JAVASCRIPTS -->
+</body>
+</html>

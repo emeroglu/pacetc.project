@@ -1,0 +1,15 @@
+﻿.overlay img
+{
+    height: 250px;
+}
+
+#pace
+{
+    background-color: rgba(4, 53, 114, 0.01);
+    border-bottom: 3px solid rgba(1, 46, 111, 0.8);
+}
+
+#abroad
+{
+    border-bottom: 3px solid rgba(1, 46, 111, 0.8);
+}

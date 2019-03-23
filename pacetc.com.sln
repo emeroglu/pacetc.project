@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pacetc.com", "pacetc.com\pacetc.com.csproj", "{7285AE43-BFCD-4D5E-921A-5BFFD892E29A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cms.pacetc.com", "cms.pacetc.com\cms.pacetc.com.csproj", "{AC312D75-C416-4AAC-BD71-E6A89452DF88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7285AE43-BFCD-4D5E-921A-5BFFD892E29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7285AE43-BFCD-4D5E-921A-5BFFD892E29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7285AE43-BFCD-4D5E-921A-5BFFD892E29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7285AE43-BFCD-4D5E-921A-5BFFD892E29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC312D75-C416-4AAC-BD71-E6A89452DF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC312D75-C416-4AAC-BD71-E6A89452DF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC312D75-C416-4AAC-BD71-E6A89452DF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC312D75-C416-4AAC-BD71-E6A89452DF88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

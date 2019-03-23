@@ -1,0 +1,87 @@
+﻿.light-wrapper
+{
+    padding-bottom: 25px;
+}
+
+.bannercontainer
+{
+    border-bottom: 3px solid rgba(1, 46, 111, 0.8);
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: rgba(4, 53, 114, 0.01);
+}
+
+.tp-caption.huge
+{
+    color: rgba(0,0,0, 0.61) !important;
+}
+
+.tp-caption.big
+{
+    color: rgba(0,0,0, 0.67) !important;
+}
+
+header
+{
+    background-color: white;
+}
+
+#divisions
+{
+    height:350px;
+}
+
+#studyabroad
+{
+    height: 350px;
+}
+
+.bannercontainer .tp-bullets.simplebullets.round .bullet.first
+{
+    display: none !important;
+}
+
+#testimonials div
+{
+    margin-bottom: 20px;
+}
+
+#testimonials .tab
+{
+    margin-left: 5px;
+}
+
+#testimonials:before
+{
+    display: none;
+}
+
+#testimonials
+{
+    width: 100%;    
+}
+
+    #testimonials p
+    {
+        font-weight: 400;
+    }
+
+#testimonials .author
+    {
+        margin-top: 25px;
+    }
+
+.etabs
+{
+    margin-top: -25px;
+}
+
+#ourcourses .inner .description
+{
+    font-weight: 600;
+}
+
+.caption
+{
+    font-weight: 400 !important;
+}

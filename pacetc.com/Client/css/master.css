@@ -1,0 +1,48 @@
+﻿.top-wrapper
+{
+    background-color: white;
+}
+
+header
+{
+    background-color: rgba(4, 53, 114, 0.01);
+    border-bottom: 3px solid rgba(1, 46, 111, 0.8);
+}
+
+    header .inner .menu
+    {
+        float: right;
+        padding-bottom: 25px;
+        margin-top: 15px;
+    }
+
+    header .inner
+    {
+        margin-bottom: 35px;
+        padding: 75px 0px 25px !important;
+    }
+
+#contact
+{
+    background-color: rgba(4, 53, 114, 0.01);
+    color: #555555;
+    border-top: 3px solid rgba(1, 46, 111, 0.8);
+}
+
+    #contact .inner h1
+    {
+        color: #555555;
+    }
+
+    #contact .inner
+    {
+        padding: 90px 0px;
+        padding-bottom: 60px;
+    }
+
+        #contact .inner .description
+        {
+            color: #555555;
+            margin-top: -30px;
+            margin-left: 40px;
+        }
